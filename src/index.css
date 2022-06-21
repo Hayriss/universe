@@ -1,13 +1,129 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800&display=swap");
+
+@layer base {
+  body {
+    @apply font-[Outfit];
+    @apply bg-[#000];
+  }
+  h1 {
+    @apply text-2xl text-white;
+  }
+  p {
+    @apply text-2xl text-white;
+  }
+  a {
+    @apply text-xl font-medium;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg text-white;
+  }
+  li {
+    @apply px-4 cursor-pointer;
+  }
+}
+@layer components {
+  .header {
+    @apply fixed w-full h-[90px] text-white flex justify-between items-center p-4 z-10;
+  }
+  .header-bg {
+    @apply bg-black opacity-70 ease-in duration-300;
+  }
+  .btn {
+    @apply py-3 px-8 my-4 mx-1 text-xl uppercase bg-transparent text-[#fff] border border-white cursor-pointer;
+  }
+  .btn-light {
+    @apply bg-black opacity-20;
+  }
+  .btn:hover {
+    @apply bg-black opacity-20;
+  }
+  .link {
+    @apply text-4xl;
+  }
+  #video {
+    @apply fixed w-full h-full object-cover -z-10;
+  }
+  .footer h3 {
+    @apply text-2xl py-4;
+  }
+  .footer p {
+    @apply text-xl py-4;
+  }
+  .card-container .card {
+    @apply border border-white text-white;
+  }
+  .card {
+    @apply text-center p-4;
+  }
+  .card:hover {
+    @apply bg-[#141414];
+  }
+  .card h3 {
+    @apply text-2xl p-4;
+  }
+  .card .bar {
+    @apply border-b border-white w-[10%] my-6 mx-auto block;
+  }
+  .card .btc {
+    @apply text-5xl font-semibold p-4;
+  }
+  .pricing p {
+    @apply text-white py-4 text-xl;
+  }
+  .card .btn {
+    @apply block w-[80%] my-8 mx-auto;
+  }
+  .training {
+    @apply w-full my-12 mx-0 grid grid-cols-2 h-full;
+  }
+  .training .img {
+    @apply max-w-[80%];
+  }
+  .training .left {
+    @apply text-center m-auto py-4 px-16 max-w-[600px];
+  }
+  .training .left p {
+    @apply my-5;
+  }
+  .training .right {
+    @apply w-full my-auto;
+  }
+  .right .img-container {
+    @apply grid grid-cols-12 relative items-center text-center;
+  }
+  .right .img {
+    @apply max-w-[60%] border border-[#333];
+  }
+  .form2 {
+    @apply flex flex-col p-4 m-auto max-w-[60%];
+  }
+  .form2 label {
+    @apply mb-2 text-white;
+  }
+  .form2 input {
+    @apply mb-4 py-3 px-5 text-xl font-[Outfit] bg-[#2c2b2b] text-white;
+  }
+  .form2 textarea {
+    @apply mb-4 py-3 px-5 text-xl font-[Outfit] bg-[#2c2b2b] text-white;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.right .top {
+  grid-column: 1 / span 8;
+  grid-row: 1;
+  padding-top: 20%;
+  z-index: 6;
+}
+
+.right .bottom {
+  grid-column: 4/ -1;
+  grid-row: 1;
+  z-index: 5;
 }
