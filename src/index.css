@@ -101,6 +101,12 @@
   .right .img {
     @apply max-w-[60%] border border-[#333];
   }
+  .right .top {
+    @apply col-start-1 col-span-8 row-start-1 pt-[20%] z-20;
+  }
+  .right .bottom {
+    @apply col-start-4 col-span-9 row-start-1 z-10;
+  }
   .form2 {
     @apply flex flex-col p-4 m-auto max-w-[60%];
   }
@@ -113,17 +119,4 @@
   .form2 textarea {
     @apply mb-4 py-3 px-5 text-xl font-[Outfit] bg-[#2c2b2b] text-white;
   }
-}
-
-.right .top {
-  grid-column: 1 / span 8;
-  grid-row: 1;
-  padding-top: 20%;
-  z-index: 6;
-}
-
-.right .bottom {
-  grid-column: 4/ -1;
-  grid-row: 1;
-  z-index: 5;
 }
